@@ -1,0 +1,15 @@
+/target
+/lib
+/classes
+/checkouts
+pom.xml
+*.jar
+*.class
+/.lein-*
+/.env
+*.log
+resources/public/js/out
+screen.css
+app.js
+*-init.clj
+*.db
