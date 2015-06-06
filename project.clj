@@ -4,12 +4,22 @@
                  [reagent "0.5.0"]
                  [re-frame "0.4.0"]
                  [re-com "0.5.4"]
-                 [secretary "1.2.3"]]
+                 [secretary "1.2.3"]
+                 [compojure "1.3.1"]
+                 [ring/ring-defaults "0.1.2"]]
 
   :source-paths ["src/clj"]
 
   :plugins [[lein-cljsbuild "1.0.6"]
-            [lein-figwheel "0.3.3"]]
+            [lein-figwheel "0.3.3"]
+            [lein-ring "0.8.13"]]
+
+  :ring {:handler appointment.core/app}          
+
+:profiles
+  {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
+                        [ring-mock "0.1.5"]]}}
+
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
 

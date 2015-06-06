@@ -13,3 +13,4 @@ screen.css
 app.js
 *-init.clj
 *.db
+resources/public/js/compiled
